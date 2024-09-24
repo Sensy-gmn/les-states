@@ -2,6 +2,8 @@ import "./App.css";
 import Form from "./Form.jsx";
 import Gallery from "./Galery.jsx";
 import FeedbackForm from "./FeedbackForm.tsx";
+import EtatSuperflu from "./EtatSuperflu.tsx";
+
 function App() {
     return (
         <>
@@ -9,6 +11,7 @@ function App() {
             <Gallery />
             <Form />
             <FeedbackForm />
+            <EtatSuperflu />
         </>
     );
 }
