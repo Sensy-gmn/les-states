@@ -1,4 +1,5 @@
 import "./App.css";
+import Form from "./Form.jsx";
 import Gallery from "./Galery.jsx";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
         <>
             <h1>main page</h1>
             <Gallery />
+            <Form />
         </>
     );
 }
