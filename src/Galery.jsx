@@ -3,29 +3,23 @@ import sculptureList from "./data.js";
 
 export default function Gallery() {
     const [count, setCount] = useState(0);
-    const [fakeCount, setFakeCount] = useState(0);
 
     function handleClick() {
         setCount(count + 1);
     }
 
-    function incrementCount() {
-        setFakeCount(fakeCount + 5);
-    }
-
-    function decrementCount() {
-        setFakeCount(fakeCount - 5);
-    }
-
     let sculpture = sculptureList[count];
     return (
         <>
-            <div>
-                <button onClick={decrementCount}>-5</button>
-                {fakeCount}
-                <button onClick={incrementCount}>+5</button>
-            </div>
-            <button onClick={handleClick}>Suivant</button>
+            <button onClick={handleClick} disabled={count === 0}>
+                précédent
+            </button>
+            <button
+                onClick={handleClick}
+                disabled={count === sculptureList.length - 1}
+            >
+                Suivant
+            </button>
             <h2>
                 <i>{sculpture.name} </i>
                 par {sculpture.artist}
